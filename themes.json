@@ -158,5 +158,25 @@
       "blue": "#06B6EF",
       "red": "#EF6155"
     }
-  }
+    },
+    "outrun": {
+        "light": {
+            "background": "#161130",
+            "foreground": "#b43fd4",
+            "yellow": "#ffd400",
+            "green": "#A3BE8C",
+            "gray": "#88C0D0",
+            "blue": "#EBCB8B",
+            "red": "#e61f44"
+        },
+        "dark": {
+            "background": "#161130",
+            "foreground": "#b43fd4",
+            "yellow": "#ffd400",
+            "green": "#A3BE8C",
+            "gray": "#88C0D0",
+            "blue": "#EBCB8B",
+            "red": "#e61f44"
+        }
+    }
 }
