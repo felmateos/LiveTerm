@@ -20,7 +20,7 @@ const sumfetch = async (args: string[]): Promise<string> => {
     ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀ ⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀ ⢸⣿⡇⠀⠀⠀                      -----------
     ⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀ ⣿⣿⡇⠀⢹⣿⡆⠀⠀  ⣸⣿⠇⠀⠀⠀         
     ⠀⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀                          PROJETOS 
-    ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                             <u><a href="${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
+    ⠀⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                             <u><a href="https://github.com/${config.social.github}" target="_blank">github.com/${config.social.github}</a></u>
 `;
   }
 
