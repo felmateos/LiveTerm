@@ -19,13 +19,13 @@ export const citacao = async (args: string[]): Promise<string> => {
   const data = await getQuote();
   return data.quote;
 };
-
+/*
 export const readme = async (args: string[]): Promise<string> => {
   const readme = await getReadme();
   return `Abrindo GitHub README...\n
   ${readme}`;
 };
-
+*/
 export const clima = async (args: string[]): Promise<string> => {
   const city = args.join('+');
   if (!city) {
