@@ -9,9 +9,9 @@ export const ajuda = async (args: string[]): Promise<string> => {
   var c = '';
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
     if (i % 7 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
+      c += Object.keys(bin).sort()[i - 1] + ',\n';
     } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
+      c += Object.keys(bin).sort()[i - 1] + ', ';
     }
   }
   return `Seja bem vindo! Aqui estão todos os comandos disponíveis:
