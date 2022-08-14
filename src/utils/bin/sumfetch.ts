@@ -1,6 +1,6 @@
 import config from '../../../config.json';
 
-const sumfetch = async (args: string[]): Promise<string> => {
+const sumario = async (args: string[]): Promise<string> => {
     return `
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀            Sumário
     ⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⡀⠀⠀⠀⠀⠀          
@@ -24,4 +24,4 @@ const sumfetch = async (args: string[]): Promise<string> => {
 `;
   }
 
-export default sumfetch;
+export default sumario;
