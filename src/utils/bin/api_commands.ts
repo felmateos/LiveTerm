@@ -5,7 +5,7 @@ import { getQuote } from '../api';
 import { getReadme } from '../api';
 import { getWeather } from '../api';
 
-export const projects = async (args: string[]): Promise<string> => {
+export const projetos = async (args: string[]): Promise<string> => {
   const projects = await getProjects();
   return projects
     .map(
@@ -15,21 +15,21 @@ export const projects = async (args: string[]): Promise<string> => {
     .join('\n');
 };
 
-export const quote = async (args: string[]): Promise<string> => {
+export const citacao = async (args: string[]): Promise<string> => {
   const data = await getQuote();
   return data.quote;
 };
 
 export const readme = async (args: string[]): Promise<string> => {
   const readme = await getReadme();
-  return `Opening GitHub README...\n
+  return `Abrindo GitHub README...\n
   ${readme}`;
 };
 
-export const weather = async (args: string[]): Promise<string> => {
+export const clima = async (args: string[]): Promise<string> => {
   const city = args.join('+');
   if (!city) {
-    return 'Usage: weather [city]. Example: weather casablanca';
+    return 'Usagem: clima [cidade]. Exemplo: clima São Paulo';
   }
   const weather = await getWeather(city);
   return weather;
