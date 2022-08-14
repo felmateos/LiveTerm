@@ -10,13 +10,13 @@ export const shell = async (
   const args = command.split(' ');
   args[0] = args[0].toLowerCase();
 
-  if (args[0] === 'clear') {
+  if (args[0] === 'limpar') {
     clearHistory();
   } else if (command === '') {
     setHistory('');
   } else if (Object.keys(bin).indexOf(args[0]) === -1) {
     setHistory(
-      `shell: command not found: ${args[0]}. Try 'help' to get started.`,
+      `shell: comando não encontrado: ${args[0]}. Digite 'ajuda' para ver os comandos disponíveis.`,
     );
   } else {
     const output = await bin[args[0]](args.slice(1));
