@@ -4,7 +4,7 @@ import * as bin from './index';
 import config from '../../../config.json';
 
 // Help
-export const help = async (args: string[]): Promise<string> => {
+export const ajuda = async (args: string[]): Promise<string> => {
   const commands = Object.keys(bin).sort().join(', ');
   var c = '';
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
@@ -14,36 +14,37 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+  return `Seja bem vindo! Aqui estão todos os comandos disponíveis:
 \n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumario' to display summary.
+[tab]: completa o comando.
+[ctrl+l]/limpar: limpa o terminal.\n
+Digite 'sumario' para mostrar o sumário.
 `;
 };
 
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
   window.open(`${config.repo}`);
-  return 'Opening Github repository...';
+  return 'Abrindo o repositório no GitHub...';
 };
 
 // About
-export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumario' - short summary.
-'curriculo' - my latest resume.
-'readme' - my github readme.`;
+export const sobre = async (args: string[]): Promise<string> => {
+  return `Oie! Eu sou ${config.name}. 
+Seja bem vindo ao meu portfólio!
+Mais sobre mim:
+'sumario' - pequeno sumário.
+'curriculo' - meu currículo.
+'readme' - Readme do meu GitHub.`;
 };
 
 export const curriculo = async (args: string[]): Promise<string> => {
   window.open(`${config.resume_url}`);
-  return 'Opening resume...';
+  return 'Abrindo meu currículo...';
 };
 
 // Donate
+/*
 export const donate = async (args: string[]): Promise<string> => {
   return `thank you for your interest. 
 here are the ways you can support my work:
@@ -51,44 +52,44 @@ here are the ways you can support my work:
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
 `;
 };
-
+*/
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+  return `Abrindo mailto:${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening github...';
+  return 'Abrindo GitHub...';
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
-  return 'Opening linkedin...';
+  return 'Abrindo LinkedIn...';
 };
 
 // Search
 export const google = async (args: string[]): Promise<string> => {
   window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Searching google for ${args.join(' ')}...`;
+  return `Procurando ${args.join(' ')} no Google...`;
 };
 
 export const duckduckgo = async (args: string[]): Promise<string> => {
   window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
+  return `Procurando ${args.join(' ')} no DuckDuckGo...`;
 };
 
 export const bing = async (args: string[]): Promise<string> => {
   window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
+  return `Uau, sério que você usa o Bing? Procurando ${args.join(' ')} no Bing...`;
 };
 
 export const reddit = async (args: string[]): Promise<string> => {
   window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
+  return `SProcurando ${args.join(' ')} no Reddit...`;
 };
 
 // Typical linux commands
@@ -101,41 +102,40 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
+  return `um
+monte
+de
+diretorios
+falsos`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `Infelizmente não há mais diretórios disponíveis`;
 };
 
-export const date = async (args: string[]): Promise<string> => {
+export const data = async (args: string[]): Promise<string> => {
   return new Date().toString();
 };
 
 export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
+  return `Eita, você ainda usa 'vi'? Apenas tente 'vim'.`;
 };
 
 export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
+  return `'vim' é tão antigo. Que tal 'nvim'?`;
 };
 
 export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
+  return `'nvim'? muito Nutella. Por que não 'emacs'?`;
 };
 
 export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
+  return `Sabe de uma coisa? Apenas use o vscode.`;
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+  return `Permissão recusada: com pequenos poderes vêm... nenhuma responsabilidade? `;
 };
 
 // Banner
@@ -152,7 +152,7 @@ export const banner = (args?: string[]): string => {
  ░░░░░      ░░░░░░  ░░░░░ ░░░░░ ░░░ ░░░░░  ░░░░░░░░    ░░░░░   ░░░░░░   ░░░░░░  ░░░░░░  
                                                                                         
                                                   
-Digite 'help' para ver a lista de commandos.
+Digite 'ajuda' para ver a lista de commandos.
 Digite 'sumario' para ver mais sobre mim.
 Digite 'repo' ou clique <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">aqui</a></u> para ver o repositório no Github.
 `;
