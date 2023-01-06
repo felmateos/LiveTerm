@@ -152,7 +152,7 @@ export const banner = (args?: string[]): string => {
  ░░░░░      ░░░░░░  ░░░░░ ░░░░░ ░░░ ░░░░░  ░░░░░░░░    ░░░░░   ░░░░░░   ░░░░░░  ░░░░░░  
                                                                                         
 Caso prefira, clique <u><a class="text-light-yellow dark:text-dark-yellow underline" href="${config.beacons}" target="_blank">aqui</a></u> para ver uma versão simplificada.                                        
-Digite 'ajuda' para ver a lista de commandos.
+Digite 'ajuda' para ver a lista de comandos.
 Digite 'sumario' para ver mais sobre mim.
 `;
 };
